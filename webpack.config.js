@@ -9,9 +9,11 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 module.exports = {
     mode:'development',
+    // 将文件index.html放进内存
     plugins:[
         htmlWebpackPlugin
     ],
+    // 最新的babel配置
     module: {
         rules:[
             {test: /\.js|jsx$/, use: 'babel-loader',
@@ -46,5 +48,9 @@ module.exports = {
 
 
         ]
+    },
+    // 省略文件文件后缀名
+    resolve: {
+        extensions: ['.js', '.jsx', '.json']
     }
 }
