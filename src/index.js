@@ -39,5 +39,6 @@ const Index = () =>{
 
 
 console.log("__dirname:"+__dirname)
+console.log("__dirname:"+__filename)
 
 ReactDOM.render(<Hello {...dog}></Hello>, document.getElementById('app'))

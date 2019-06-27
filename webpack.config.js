@@ -5,8 +5,7 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
     template:'./src/index.html',
     filename: 'index.html'
 }) 
-
-
+console.log(__dirname)
 module.exports = {
     mode:'development',
     // 将文件index.html放进内存
@@ -49,8 +48,15 @@ module.exports = {
 
         ]
     },
-    // 省略文件文件后缀名
     resolve: {
-        extensions: ['.js', '.jsx', '.json']
+
+        //可以省略一下文件后缀名
+        extensions: ['.js', '.jsx', '.json'],
+
+        // 这样， @就表示项目根目录中src的这层路径 
+        alias: {
+            '@': path.join(__dirname, './src')
+        }
     }
+   
 }
