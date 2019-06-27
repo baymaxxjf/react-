@@ -1,3 +1,4 @@
+@echo  off
 call git status
 cd ..
 call git add *
