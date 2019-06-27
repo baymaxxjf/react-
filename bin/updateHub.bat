@@ -11,6 +11,8 @@ if "%comment%"=="" (
     echo "自定义代码变更说明为%comment%"
 )
 call git status
+
 REM  这是注释
 REM  set  /p comment = "please input code change description"
+
 call git push 
