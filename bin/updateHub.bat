@@ -1,6 +1,6 @@
 call git status
 cd ..
 call git add *
-set /p comment="è¯·è¾“å…¥ä»£ç å˜æ›´è¯´æ˜:" 
+set /p comment="ÇëÊäÈë´úÂë±ä¸üËµÃ÷:" 
 call git commit -m "%comment%"
 call git push 
