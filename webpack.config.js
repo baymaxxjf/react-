@@ -55,7 +55,7 @@ module.exports = {
 
         // 这样， @就表示项目根目录中src的这层路径 
         alias: {
-            '@': path.join(__dirname, './src')
+            '@': path.join(__dirname, './src/components')
         }
     }
    

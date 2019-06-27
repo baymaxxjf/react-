@@ -1,7 +1,25 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 
-import Hello from './components/Hello'
+import Hello from '@/Hello'
+import CmtList from '@/CmtList';
+class Movie extends Component{
+    constructor(){
+        super()
+        this.state = {
+            msg: '这是movie 组件的私有数据'
+        }
+    }
+    render(){
+        this.state.msg= 'a'
+        return <div>
+            这是movie组件 {this.props.name} ---{ this.props.age}
+            {this.state.msg}
+        </div>
+    }
+}
+
+
 
 const myh1 = <div>
     gergreggerg
@@ -41,4 +59,4 @@ const Index = () =>{
 console.log("__dirname:"+__dirname)
 console.log("__dirname:"+__filename)
 
-ReactDOM.render(<Hello {...dog}></Hello>, document.getElementById('app'))
+ReactDOM.render(<CmtList></CmtList>, document.getElementById('app'))
